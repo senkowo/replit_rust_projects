@@ -1,0 +1,3 @@
+
+We start with a probability model of a discrete random variable and then apply a linear transformation (multiplying and adding a constant to the random variable). We do the transformations using the List on a TI-84 Plus graphing calculator and 1-VarStats with the Frequency option. We see that multiplying by a constant affects both the mean and standard deviation but adding a constant only affects the mean (a measure of center) and not the standard deviation (a measure of spread).
+
