@@ -68,6 +68,6 @@ Control Flow:
   side of a let statement. 
 > Loops::breaks::returnvalue : break x * 2;
 < for loop example:
-    for number in (1..4).rev() {
-        println!("{}", number);
-    }
+	for number in (1..4).rev() {
+	    println!("{}", number);
+	}
