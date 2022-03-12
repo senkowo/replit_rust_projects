@@ -1,6 +1,6 @@
-run = ["cd ~/DarksalmonEllipticalDrawing/guess/ && cargo run"]
+run = ["cargo", "run"]
 
-entrypoint = "guess/src/main.rs"
+entrypoint = "variables/src/main.rs"
 
 [packager]
 language = "rust"

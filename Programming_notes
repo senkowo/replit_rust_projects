@@ -1,0 +1,73 @@
+
+
+General:
+-----------
+rustfmt
+
+cargo [|>] {
+    |> new ~ create new project
+    |> run ~ build and execute
+    |> build
+}
+
+
+Data Types:
+--------------
+
+Scalar Types (primitive):
+int, float, bool, char.
+
+Compound Types (primitive):
+tup, array.
+
+More on Tuples:
+> Fixed length, can contain multiple types, 
+> optional type annotations can be added. 
+< Destructuring a Tuple using pattern matching: 
+	let (x, y, z) = tup;
+
+More on Arrays:
+> Fixed length, only one type, 
+> Data is allocated on the stack rather than the heap. 
+> optional type annocations can be added. 
+< Declaring an array with the same value for each element:
+	let a = [3;5];
+
+
+Statement vs Expression:
+-------------
+
+ Statements perform an action and do not return a value.
+ Expressions evaluate to a resulting value. 
+
+< Cannot assign let statement to another variable:
+  |    let x = (let y = 6);
+  |             ^^^
+  = note: let y = 6 is a statement, so x cannot bind to any value
+
+~ Examples of expressions: 
+	6
+	calling a function
+	calling a macro
+	{}
+    if expressions
+    loops 
+~
+
+
+Functions:
+--------------
+> Use -> to declare return type. 
+
+
+
+
+Control Flow:
+--------------
+> /If/ and loops are expressions, so you can use them on the right
+  side of a let statement. 
+> Loops::breaks::returnvalue : break x * 2;
+< for loop example:
+    for number in (1..4).rev() {
+        println!("{}", number);
+    }
