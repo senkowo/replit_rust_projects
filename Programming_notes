@@ -71,3 +71,41 @@ Control Flow:
 	for number in (1..4).rev() {
 	    println!("{}", number);
 	}
+
+
+Ownership:
+------------
+> Stack vs Heap
+> Ownership basically makes it so you don't have to:
+  > keep track of what parts of code are using what data on the heap
+  > minimize the amount of duplicate data on the heap
+  > and clean up unused data on the heap so you don't run out of space
+
+> Rules:
+  - Each value in Rust has a variable that's called its /owner/.
+  - There can be only one owner at a time.
+  - When the owner goes out of scope, the value will be dropped.
+
+String (Object):
+----------------
+~ All of the data types covered earlier were primitives and are stored
+  on the stack and popped off the stack when their scope was over.
+  However, objects like "String" are stored on the heap.
+
+        String Literal(&str) [Primitive]
+               {String value is hardcoded into the program; immutable}
+               {know the contents at compile time, so hardcoded into the
+                 final executable; fast & efficient, but immutable}
+        String Object(String) [Object]
+               {Can store an amount of text unknown at compile time}
+               {once the object goes out of scope, the memory is
+                 automatically returned or deallocated; "drop"}
+
+> Stack stores primitive data types (local variable; exists only in
+  variable scope) and pointers (to objects in heap).
+        Note: pointers are used to locate Objects (dynamically allocated
+        blocks of memory) stored somewhere in the heap.
+
+> Heap stores objects
+
+>
