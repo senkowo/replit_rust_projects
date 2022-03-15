@@ -60,8 +60,6 @@ Functions:
 > Use -> to declare return type. 
 
 
-
-
 Control Flow:
 --------------
 > /If/ and loops are expressions, so you can use them on the right
@@ -71,6 +69,7 @@ Control Flow:
 	for number in (1..4).rev() {
 	    println!("{}", number);
 	}
+
 
 
 Ownership:
@@ -93,19 +92,29 @@ String (Object):
   However, objects like "String" are stored on the heap.
 
         String Literal(&str) [Primitive]
-               {String value is hardcoded into the program; immutable}
-               {know the contents at compile time, so hardcoded into the
-                 final executable; fast & efficient, but immutable}
+               {The string's value is known at compile time, so it is
+                 hardcoded into the final executable; therefore, it is
+                 fast & efficient, but immutable}
         String Object(String) [Object]
-               {Can store an amount of text unknown at compile time}
+               {Able to store an amount of text unknown at compile time.
+                 So basically, is /mutable/.}
                {once the object goes out of scope, the memory is
                  automatically returned or deallocated; "drop"}
 
-> Stack stores primitive data types (local variable; exists only in
-  variable scope) and pointers (to objects in heap).
+> The Stack stores primitive data types (local variable; only exists in
+  its variable scope) and pointers (to objects in heap).
         Note: pointers are used to locate Objects (dynamically allocated
         blocks of memory) stored somewhere in the heap.
 
-> Heap stores objects
+> Heap stores objects.
 
->
+
+Data and Variable Interaction:
+----------------------
+> Move (basically a shallow copy of object, plus original is invalidated)
+> Clone (basically a deep copy of object, and original remains true)
+
+~ Side note: an ordinary int can be copied without clone, bc you're
+  simply cloning the stack memory (similar to s1/*object*/ = s2).
+
+> The Copy Trait (an annotation that can be placed on most primitives...)
