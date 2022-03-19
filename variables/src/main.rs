@@ -1,7 +1,21 @@
 fn main() {
-    let mut s = String::from("hello");
+    let s = String::from("hewwo hooman >w<");
+    let first_word = ret_first_word(&s);
+    println!("The first word of '{}' is '{}'", s, first_word);
 
-    s.push_str(", world!");
+    let s = "awoo cries the momiji";
+    let first_word = ret_first_word(&s);
+    println!("The first word of '{}' is '{}'", s, first_word);
+}
 
-    println!("{}", s);
+fn ret_first_word(s: &str) -> &str {
+    let byte_arr = s.as_bytes();
+
+    for (i, &byte) in byte_arr.iter().enumerate() {
+        if byte == b' ' {
+            return &s[..i];
+        }
+    }
+
+    return &s[..];
 }

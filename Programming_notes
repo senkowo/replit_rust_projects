@@ -69,8 +69,18 @@ Control Flow:
 	for number in (1..4).rev() {
 	    println!("{}", number);
 	}
+< for loop syntax:
+    for iterator in range {
+        statements;
+    }
 
 
+
+
+
+------------------------------
+|> Understanding Ownership: <|
+------------------------------
 
 Ownership:
 ------------
@@ -112,9 +122,57 @@ String (Object):
 Data and Variable Interaction:
 ----------------------
 > Move (basically a shallow copy of object, plus original is invalidated)
+    -- happens when assigning a value to another variable; to prevent
+       'double free' errors.
 > Clone (basically a deep copy of object, and original remains true)
 
 ~ Side note: an ordinary int can be copied without clone, bc you're
   simply cloning the stack memory (similar to s1/*object*/ = s2).
 
-> The Copy Trait (an annotation that can be placed on most primitives...)
+> The Copy Trait? (most primitives, stored on stack, can be directly
+  copied)
+
+Ownership and Functions:
+--------------------
+> Passing a variable to a function will move or copy, just as assignment
+  does (depending on whether it's an object or Copy).
+> Returning a variable also transfers ownership.
+
+References and Borrowing:
+------------------
+*~ If we want to let a function use a value without letting it take
+  ownership and having to return ownership for every function using
+  tuples, we can use references.
+
+> References (allows you to refer to some value without taking ownership
+  of it)
+
+    fn calc_len(s: &String) -> usize { // s is a reference to a String
+
+> Borrowing (having references as function parameters)
+> Mutable References (&mut String)
+    - No two mut references in a scope; to prevent 'data races'
+    - Also cannot combine mutable and immutable references in a
+      statement.
+    - Multiple immutables are ok, but mutables are not (unpredictable).
+    - Dangling References
+
+> References summary:
+  > At any given time, you can have /either/ but not both of the
+    following: one mutable reference /or/ any number of immutable
+    references.
+  > References must always be valid.
+
+<<< I'm taking too many notes! Read everything, then take forgetful notes
+
+The Slice Type:
+------------
+> A type of reference.
+
+> Can be used to refer to a String object or string literal.
+
+< String Slices (reference to a part of a string):
+    &s[0..5]
+    &s[..]
+
+> String literals are Slices...?
