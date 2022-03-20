@@ -78,7 +78,6 @@ More on Arrays:
 
 
 
-
 ** Understanding Ownership
 
 *** Ownership:
@@ -174,4 +173,6 @@ More on Arrays:
     &s[..]
 
 > String literals are Slices...?
+
+
 ** Using Structs to Structure Related Data
