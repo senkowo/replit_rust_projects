@@ -13,5 +13,6 @@
 	pkgs.uwuify
 	pkgs.cmatrix
 	pkgs.cbonsai
+	pkgs.emacs
 	];
 }
