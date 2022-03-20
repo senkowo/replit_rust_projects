@@ -4,6 +4,8 @@
 ;	https://www.emacswiki.org/emacs/InstallingPackages
 ;	https://www.emacswiki.org/emacs/LoadPath
 ;	https://www.emacswiki.org/emacs/LoadingLispFiles
+;	https://zhangda.wordpress.com/2016/02/15/configurations-for-beautifying-emacs-org-mode/
+;maybe	https://orgmode.org/worg/org-tutorials/org4beginners.html
 ;
 
 
