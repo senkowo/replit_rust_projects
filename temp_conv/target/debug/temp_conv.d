@@ -1,1 +1,1 @@
-/Users/kaiarntz/vsCodeAll_/rust_projects/replit_rust_projects/temp_conv/target/debug/temp_conv: /Users/kaiarntz/vsCodeAll_/rust_projects/replit_rust_projects/temp_conv/src/main.rs
+/home/runner/DarksalmonEllipticalDrawings/temp_conv/target/debug/temp_conv: /home/runner/DarksalmonEllipticalDrawings/temp_conv/src/main.rs
