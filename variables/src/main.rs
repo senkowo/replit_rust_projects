@@ -3,7 +3,7 @@ fn main() {
     let first_word = ret_first_word(&s);
     println!("The first word of '{}' is '{}'", s, first_word);
 
-    let s = "awoo cries the momiji";
+    let s = "awoo! cries the cute momiji";
     let first_word = ret_first_word(&s);
     println!("The first word of '{}' is '{}'", s, first_word);
 }
@@ -17,5 +17,5 @@ fn ret_first_word(s: &str) -> &str {
         }
     }
 
-    return &s[..];
+    &s
 }
