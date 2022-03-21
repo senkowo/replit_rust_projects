@@ -1,21 +1,13 @@
 fn main() {
-    let s = String::from("hewwo hooman >w<");
-    let first_word = ret_first_word(&s);
-    println!("The first word of '{}' is '{}'", s, first_word);
-
-    let s = "awoo! cries the cute momiji";
-    let first_word = ret_first_word(&s);
-    println!("The first word of '{}' is '{}'", s, first_word);
+    let output = build_user(String::from("test@e621.net"), String::from("examplename"));
+    println!("{}", output.email);
 }
 
-fn ret_first_word(s: &str) -> &str {
-    let byte_arr = s.as_bytes();
-
-    for (i, &byte) in byte_arr.iter().enumerate() {
-        if byte == b' ' {
-            return &s[..i];
-        }
+fn build_user(email: String, username: String) {
+    struct User {
+        email: email,
+        username: username,
+        active: true,
+        sign_in_count: i32: 1,
     }
-
-    &s
 }
