@@ -181,14 +181,7 @@ More on Arrays:
 --------------
 > Struct (similar to tuple, but with naming so no order)
 > field init shorthand (if parameter/var is the same as the field,
-  then you can simply write it once)
+    then you can simply write it once)
 > struct update syntax ("..user1" -- fills in the remaining fields with
-  another struct-instance's) (instead of "active: user1.active, ...")
-> tuple structe (looks similar to tuples)
-
-
-
-
-
-
-
+    another struct-instance's) (instead of "active: user1.active, ...")
+> tuple structure (looks similar to tuples, but with names)
