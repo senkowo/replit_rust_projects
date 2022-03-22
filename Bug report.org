@@ -1,0 +1,9 @@
+potential issue: onBoot equals execute shellscript; disconnect from server while editing and crashing edit session(nvim: external editor, explain details); stuck on "boot loot"; 
+
+I modified the .replit file to run a shellscript when the repl boots up: 
+    onBoot = ["./startup.sh"]
+If I lose connection with the server while editing the shellscript in an external editor (neovim) in the terminal/shell, the repl stops functioning. Attempting to open the repl will result in the repl not loading; the console prints "Booting Repl" and a red error message at the bottom right prints "Failed to connect, retrying". 
+When neovim crashes with unsaved changes, usually, a pop-up appears the next time neovim is opened, inquiring what action to perform with the found swap file. 
+Perhaps the repl not loading past the "Booting repl" sequence is due to neovim preventing the shellscript from being run, due to the error. Seems odd that a text editor would prevent a shellscript from being executed due to a swap file found with unsaved changes, but maybe I'm wrong
+
+The shellscript runs a command to install a vim extention called vim-plug, but that may be irrelevant.
