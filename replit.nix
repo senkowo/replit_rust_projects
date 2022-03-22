@@ -6,7 +6,7 @@
 		pkgs.cargo-edit
         pkgs.rust-analyzer
         pkgs.vim
-	pkgs.neovim
+	    pkgs.neovim
         pkgs.neofetch
         pkgs.htop
 	pkgs.uwufetch

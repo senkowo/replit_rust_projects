@@ -23,7 +23,7 @@
 (setq inhibit-startup-screen t)
 
 ; Sets up evil-mode
-(add-to-list 'load-path "~/DarksalmonEllipticalDrawings/.emacs.d/evil")
+(add-to-list 'load-path "~/replitrustprojects/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
 
@@ -40,12 +40,12 @@
 ;------------------;
 
 ; Sets up powerline
-(add-to-list 'load-path "~/DarksalmonEllipticalDrawings/.emacs.d/extensions/powerline-fork/")
+(add-to-list 'load-path "~/replitrustprojects/.emacs.d/extensions/powerline-fork/")
 (require 'powerline)
 (powerline-default-theme)
 
 ; Sets up theme
-(add-to-list 'custom-theme-load-path "~/DarksalmonEllipticalDrawings/.emacs.d/themes/")
+(add-to-list 'custom-theme-load-path "~/replitrustprojects/.emacs.d/themes/")
 (load-theme 'inkpot t)
 
 
@@ -70,8 +70,8 @@
 ;------------------;
 
 ; 2048
-(add-to-list 'load-path "~/DarksalmonEllipticalDrawings/.emacs.d/extensions/2048-game")
-(load "~/DarksalmonEllipticalDrawings/.emacs.d/extensions/2048-game/2048-game.el")
+(add-to-list 'load-path "~/replitrustprojects/.emacs.d/extensions/2048-game")
+(load "~/replitrustprojects/.emacs.d/extensions/2048-game/2048-game.el")
 
 
 
@@ -87,7 +87,7 @@
 (add-hook 'org-mode-hook 'org-indent-mode)
 
 ; org bullet set:
-(add-to-list 'load-path "~/DarksalmonEllipticalDrawings/.emacs.d/extensions/org-superstar-mode")
+(add-to-list 'load-path "~/replitrustprojects/.emacs.d/extensions/org-superstar-mode")
 (require 'org-superstar)
 (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 

@@ -1,3 +1,3 @@
 
-emacs -q -l ~/DarksalmonEllipticalDrawings/.emacs.d/init.el $1
+emacs -q -l ~/replitrustprojects/.emacs.d/init.el $1
 

@@ -1,6 +1,8 @@
 run = ["cargo", "run"]
 
-entrypoint = "variables/src/main.rs"
+entrypoint = ["~/replitrustprojects"]
+
+onBoot = ["./startup.sh"]
 
 [packager]
 language = "rust"
