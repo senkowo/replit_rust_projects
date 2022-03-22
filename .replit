@@ -1,7 +1,5 @@
 run = ["cargo", "run"]
 
-entrypoint = ["~/replitrustprojects"]
-
 onBoot = ["./startup.sh"]
 
 [packager]
