@@ -4,12 +4,12 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 echo "vim-plug installed!"
 
 
-if [ -d ~/replitrustprojects/.config/ ]; 
+if [ -d ~/replitrustprojects/.config/ ]; then
 	rm -rf ~/replitrustprojects/.config/
 fi
 
 mkdir ~/replitrustprojects/.config/
-cp -R ~/replitrustprojects/config/nvim/ ~/replitrustprojects/.config/
+cp -R ~/replitrustprojects/e-config/nvim/ ~/replitrustprojects/.config/
 
 echo ".config directory generated!"
 
@@ -18,6 +18,6 @@ if [ -f ~/.emacs.el ]; then
     rm ~/.emacs.el
 fi
 
-cp ~/replitrustprojects/.config/.emacs.el ~/
+cp ~/replitrustprojects/e-config/.emacs.el ~/
 
 echo "set up .emacs.el!"
