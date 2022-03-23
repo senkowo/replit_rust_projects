@@ -9,7 +9,7 @@ if [ -d ~/replitrustprojects/.config/ ];
 fi
 
 mkdir ~/replitrustprojects/.config/
-cp -R ~/replitrustprojects/config/ ~/replitrustprojects/.config/
+cp -R ~/replitrustprojects/config/nvim/ ~/replitrustprojects/.config/
 
 echo ".config directory generated!"
 
