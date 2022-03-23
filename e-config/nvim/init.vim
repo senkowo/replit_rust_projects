@@ -12,3 +12,9 @@ Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/preservim/nerdtree'
 
 call plug#end()
+
+
+
+let g: NERDTreeDirArrowExpandable="+"
+let g: NERDTreeDirArrowCollapsible="~"
+
