@@ -185,3 +185,14 @@ More on Arrays:
 > struct update syntax ("..user1" -- fills in the remaining fields with
     another struct-instance's) (instead of "active: user1.active, ...")
 > tuple structure (looks similar to tuples, but with names)
+
+
+*** Enums and Pattern Matching:
+------------------
+> instead of having enums inside every arm of a struct, you can instead
+  have put data directly inside each enum variant:
+<   enum IpAddr {
+        V4(String),
+        V6(String),
+    }
+    let home = IpAddr::V4(String::from("127.0.0.1"));

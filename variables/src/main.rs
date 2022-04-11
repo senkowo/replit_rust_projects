@@ -1,23 +1,18 @@
-struct Rectangle {
-    width: u32,
-    height: u32,
-}
-
-impl Rectangle {
-    fn area(&self) -> u32 {
-        self.width * self.height
-    }
-    fn square(size: u32) -> Rectangle {
-        Rectangle { width: size, height: size }
-    }
-}
+use std::collections::HashMap;
 
 fn main() {
-    let rect1 = Rectangle { width: 10, height: 30 };
-    println!("The area of rect1 is {}", rect1.area());
+    let text = "hello world wonderful world";
 
-    println!(
-        "The width of a square of 6 units long per side is {}",
-        Rectangle::square(6).width
-    )
+    let mut map = HashMap::new();
+
+    for word in text.split_whitespace() {
+        let count = map.entry(word).or_insert(0);
+        *count += 1;
+        println!("{:?}", map);
+    }
+    for _ in 0..3 {
+        let count = map.entry("hello").or_insert(0);
+        *count = 55;
+    }
+    println!("{:?}", map);
 }
