@@ -1,0 +1,9 @@
+
+* Vim notes
+** f or F to find next/previous occurence of letter, respectively.
+** % to go to respective bracket/parenthesis.
+** * and # to go to next/previous occurrence of current word, respectively.
+** <num>G to go to respective line number. 
+** O to insert newline ABOVE current line.
+*** o to insert newline below current line.
+** . to repeat the previous command.
