@@ -14,5 +14,9 @@
 	pkgs.cmatrix
 	pkgs.cbonsai
 	pkgs.emacs
+	pkgs.ranger
+    pkgs.tree
+    pkgs.fd
+    pkgs.man-db
 	];
 }
